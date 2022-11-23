@@ -57,7 +57,7 @@ Setelah dilakukan pembagian subnetting, maka dilakukan pendataan untuk setiap ba
 
 ### Tree Pembagian IP Address
 Setelah dilakukan pembagian subnetting, maka dilakukan pembagian IP Address menggunakan tree pada setiap interface yang ada. Pembagian IP dilakukan dengan menggunakan metode tree yaitu sebagai berikut: </br>
-<img src="https://user-images.githubusercontent.com/70510279/203559702-229bbbdf-3cc5-4339-8e5d-62ab46dd9d1a.png" width="700"/>
+<img src="https://media.discordapp.net/attachments/677050949432377345/1044999039562809505/tree.png?width=1440&height=663" width="700"/>
 </br>
 Prefix IP yang digunakan harus menggunakan 192.191.X.X karena sesuai dengan pembagian IP kelompok D13. Pada pembagian IP dimulai dari 192.191.1.0/20 kemudian dibagi menjadi 2 bagian yaitu 192.191.1.0/21 hingga IP menjadi 192.191.1.X/30
 
