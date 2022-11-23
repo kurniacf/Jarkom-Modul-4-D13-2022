@@ -55,4 +55,32 @@ Setelah dilakukan pembagian subnetting, maka dilakukan pendataan untuk setiap ba
 | 17     | A17        | /30         | 2        | 2              |
 | 18     | A18        | /30         | 2        | 2              |
 
-### Membuat Routing
+### Tree Pembagian IP Address
+Setelah dilakukan pembagian subnetting, maka dilakukan pembagian IP Address menggunakan tree pada setiap interface yang ada. Pembagian IP dilakukan dengan menggunakan metode tree yaitu sebagai berikut: </br>
+<img src="https://user-images.githubusercontent.com/70510279/203559702-229bbbdf-3cc5-4339-8e5d-62ab46dd9d1a.png" width="700"/>
+</br>
+Prefix IP yang digunakan harus menggunakan 192.191.X.X karena sesuai dengan pembagian IP kelompok D13. Pada pembagian IP dimulai dari 192.191.1.0/20 kemudian dibagi menjadi 2 bagian yaitu 192.191.1.0/21 hingga IP menjadi 192.191.1.X/30
+
+### Tabel Pembagian IP Address
+Mengikuti hasil tree dan pembagian subnetting di awal, maka dilakukan pembagian IP untuk mencari Network ID dan Netmasknya. Tabelnya yaitu sebagai berikut: </br>
+
+| **Subnet** | **Netmask** | **Used Host**  | **NetMask**       | **Broadcast ID** |
+| ---------- | ----------- | -------------- | -----------       | ---------------- |
+| A1         | /22         | 1001           | 255.255.252.0     | 192.191.3.255    |
+| A6         | /23         | 1001           | 255.255.254.0     | 192.191.5.255    |
+| A9         | /23         | 271            | 255.255.254.0     | 192.191.7.255    |
+| A2         | /24         | 251            | 255.255.255.0     | 192.191.8.255    |
+| A5         | /24         | 212            | 255.255.255.0     | 192.191.9.255    |
+| A4         | /25         | 121            | 255.255.255.128   | 192.191.10.127   |
+| A8         | /25         | 121            | 255.255.255.128   | 192.191.10.255   |
+| A7         | /25         | 71             | 255.255.255.128   | 192.191.11.127   |
+| A3         | /26         | 51             | 255.255.255.192   | 192.191.12.63    |
+| A10        | /30         | 2              | 255.255.255.192   | 192.191.12.127   |
+| A11        | /30         | 2              | 255.255.255.192   |                  |
+| A12        | /30         | 2              | 255.255.255.192   |                  |
+| A13        | /30         | 2              | 255.255.255.192   |                  |
+| A14        | /30         | 2              | 255.255.255.192   |                  |
+| A15        | /30         | 2              | 255.255.255.192   |                  |
+| A16        | /30         | 2              | 255.255.255.192   |                  |
+| A17        | /30         | 2              | 255.255.255.192   |                  |
+| A18        | /30         | 2              | 255.255.255.192   |                  |
