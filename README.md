@@ -13,6 +13,7 @@
 ## Daftar Isi
 - [Topologi Jaringan](#topologi-jaringan)
 - [Cisco Packet Tracet Method VLSM](#cisco-packet-tracer-method-vlsm)
+- [GNS3 Method CIDR](#gns3-method-cidr)
 
 ---
 ## Topologi Jaringan
@@ -84,3 +85,14 @@ Mengikuti hasil tree dan pembagian subnetting di awal, maka dilakukan pembagian 
 | A16        | /30         | 2              | 192.191.0.24/30  | 255.255.255.252   | 192.191.0.27     |
 | A17        | /30         | 2              | 192.191.0.28/30  | 255.255.255.252   | 192.191.0.31     |
 | A18        | /30         | 2              | 192.191.0.32/30  | 255.255.255.252   | 192.191.0.35     |
+
+## GNS3 Method CIDR
+
+### Memmbuat Topologi Jaringan di GNS3
+Pada pembuatan topologi jaringan di GNS3, dilakukan pembuatan topologi jaringan sesuai dengan pembagian IP Address yang telah dilakukan sebelumnya. Pembuatan topologi jaringan dilakukan dengan menggunakan metode CIDR yaitu sebagai berikut: </br>
+<img src="https://user-images.githubusercontent.com/70510279/203686806-4eee7331-f2e8-469b-a538-cb81c6e7a19d.png" width="700"/>
+
+
+### Penggabungan dan Pengelompokan Node
+Langkah selanjutnya adalah melakukan pembagian dan pengelompokan node yang sesuai. Pada pembagian ini, kami menggunakan gambar dari Cisco Packet karena lebih jelas untuk pemisah kabel hubungnya. 
+<img src="https://user-images.githubusercontent.com/70510279/203740560-78e3e25e-38d3-472d-bfc0-dfbab576be04.png" width="700"/>
