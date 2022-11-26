@@ -105,4 +105,320 @@ Langkah selanjutnya adalah melakukan pembagian dan pengelompokan node yang sesua
 
 </br>
 
-### Router The Resonance
+### Guideau (A1)
+```
+auto eth0
+iface eth0 inet static
+address 192.191.8.2
+netmask 255.255.252.0
+gateway 192.191.8.1
+```
+
+### Phanora (A2)
+```
+auto eth0
+iface eth0 inet static
+address 192.191.2.2
+netmask 255.255.255.0
+gateway 192.191.2.1
+```
+
+### Johan (A2)
+```
+auto eth0
+iface eth0 inet static
+address 192.191.2.3
+netmask 255.255.255.0
+gateway 192.191.2.1
+```
+
+### Ashaf (A3)
+```
+auto eth0
+iface eth0 inet static
+address 192.191.0.66
+netmask 255.255.255.252
+gateway 192.191.0.65
+```
+
+### MattCugat (A4)
+```
+auto eth0
+iface eth0 inet static
+address 192.191.0.130
+netmask 255.255.255.128
+gateway 192.191.0.129
+```
+
+### Keith (A5)
+```
+auto eth0
+iface eth0 inet static
+address 192.191.3.2
+netmask 255.255.255.0
+gateway 192.191.3.1
+```
+
+### Oakleave (A6)
+```
+auto eth0
+iface eth0 inet static
+address 192.191.4.2
+netmask 255.255.254.0
+gateway 192.191.4.1
+```
+
+### Helga (A7)
+```
+auto eth0
+iface eth0 inet static
+address 192.191.1.2
+netmask 255.255.255.128255.255.255.128
+gateway 192.191.1.1
+```
+
+### Spendrow (A8)
+```
+auto eth0
+iface eth0 inet static
+address 192.191.1.130
+netmask 255.255.255.128
+gateway 192.191.1.129
+```
+
+### Corvekt (A9)
+```
+auto eth0
+iface eth0 inet static
+address 192.191.6.2
+netmask 255.255.254.0
+gateway 192.191.6.1
+```
+
+### Haines (A9)
+```
+auto eth0
+iface eth0 inet static
+address 192.191.6.3
+netmask 255.255.254.0
+gateway 192.191.6.1
+```
+
+### The Witch (A10)
+```
+auto eth0
+iface eth0 inet static
+address 192.191.0.2
+netmask 255.255.255.192
+gateway 192.191.0.1
+```
+
+### The Beast (A11)
+```
+auto eth0
+iface eth0 inet static
+address 192.191.0.6
+netmask 255.255.255.252
+gateway 192.191.0.5
+```
+
+### The Dauntless (A18)
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.191.0.34
+netmask 255.255.255.252
+gateway 192.191.0.33
+
+auto eth1
+iface eth1 inet static
+address 192.191.2.1
+netmask 255.255.255.0
+```
+
+### The Minister (A12)
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.191.0.10
+netmask 255.255.255.252
+gateway 192.191.0.9
+
+auto eth1
+iface eth1 inet static
+address 192.191.8.1
+netmask 255.255.252.0
+
+auto eth2
+iface eth2 inet static
+address 192.191.0.33
+netmask 255.255.255.252
+```
+
+### The Order (A13)
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.191.0.14
+netmask 255.255.255.252
+gateway 192.191.0.13
+
+auto eth1
+iface eth1 inet static
+address 192.191.0.65
+netmask 255.255.255.192
+
+auto eth2
+iface eth2 inet static
+address 192.191.0.9
+netmask 255.255.255.252
+```
+
+### The Quenn (A5)
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.191.3.3
+netmask 255.255.255.0
+gateway 192.191.3.1
+
+auto eth1
+iface eth1 inet static
+address 192.191.0.1
+netmask 255.255.255.192
+```
+
+### The Firefist (A17)
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.191.0.30
+netmask 255.255.255.252
+gateway 192.191.0.29
+
+auto eth1
+iface eth1 inet static
+address 192.191.3.1
+netmask 255.255.255.0
+
+auto eth2
+iface eth2 inet static
+address 192.191.4.1
+netmask 255.255.254.0
+```
+
+### The Profound (A16)
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.191.0.26
+netmask 255.255.255.252
+gateway 192.191.0.25
+
+auto eth1
+iface eth1 inet static
+address 192.191.1.1
+netmask 255.255.255.128
+
+auto eth2
+iface eth2 inet static
+address 192.191.1.129
+netmask 255.255.255.128
+```
+
+### The Instrument (A15)
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.191.0.22
+netmask 255.255.255.252
+gateway 192.191.0.21
+
+auto eth1
+iface eth1 inet static
+address 192.191.0.129
+netmask 255.255.255.128
+
+auto eth2
+iface eth2 inet static
+address 192.191.0.29
+netmask 255.255.255.252
+
+auto eth3
+iface eth3 inet static
+address 192.191.0.25
+netmask 255.255.255.252
+```
+
+### The Magical (A14)
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+address 192.191.0.18
+netmask 255.255.255.252
+gateway 192.191.0.17
+
+auto eth1
+iface eth1 inet static
+address 192.191.6.1
+netmask 255.255.254.0
+```
+
+### The Resonance 
+```
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+
+auto eth1
+iface eth1 inet static
+address 192.191.0.13
+netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+address 192.191.0.21
+netmask 255.255.255.252
+
+auto eth3
+iface eth3 inet static
+address 192.191.0.17
+netmask 255.255.255.252
+
+auto eth4
+iface eth4 inet static
+address 192.191.0.5
+netmask 255.255.255.252
+```
+
+</br>
+
+## Routing Setiap Node di GNS3
+
+</br>
