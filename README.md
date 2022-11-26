@@ -86,6 +86,9 @@ Mengikuti hasil tree dan pembagian subnetting di awal, maka dilakukan pembagian 
 | A17        | /30         | 2              | 192.191.0.28/30  | 255.255.255.252   | 192.191.0.31     |
 | A18        | /30         | 2              | 192.191.0.32/30  | 255.255.255.252   | 192.191.0.35     |
 
+</br>
+</br>
+
 ## GNS3 Method CIDR
 
 ### Memmbuat Topologi Jaringan di GNS3
@@ -96,3 +99,9 @@ Pada pembuatan topologi jaringan di GNS3, dilakukan pembuatan topologi jaringan 
 ### Penggabungan dan Pengelompokan Node
 Langkah selanjutnya adalah melakukan pembagian dan pengelompokan node yang sesuai. Pada pembagian ini, kami menggunakan gambar dari Cisco Packet karena lebih jelas untuk pemisah kabel hubungnya. 
 <img src="https://user-images.githubusercontent.com/70510279/203740560-78e3e25e-38d3-472d-bfc0-dfbab576be04.png" width="700"/>
+
+## Konfigurasi Setiap Node di GNS3
+
+</br>
+
+### Router The Resonance
