@@ -173,7 +173,7 @@ gateway 192.191.4.1
 auto eth0
 iface eth0 inet static
 address 192.191.1.2
-netmask 255.255.255.128255.255.255.128
+netmask 255.255.255.128
 gateway 192.191.1.1
 ```
 
@@ -446,15 +446,15 @@ route add -net 192.191.2.0 netmask 255.255.255.0 gw 192.191.0.34
 echo nameserver 192.168.122.1 > /etc/resolv.conf
 route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.191.0.13
 
-# The Minister (A12)
-route add -net 192.191.0.8 netmask 255.255.255.252 192.191.0.10
-
 # The Minister -> Guideau (A1)
 route add -net 192.191.8.0 netmask 255.255.252.0 gw 192.191.0.10
 
 # The Minister -> The Dauntless (A18)
 route add -net 192.191.0.32 netmask 255.255.255.252 gw 192.191.0.10
 route add -net 192.191.2.0 netmask 255.255.255.0 gw 192.191.0.10
+
+# The Minister (A12) XX
+route add -net 192.191.0.8 netmask 255.255.255.252 192.191.0.10 
 ```
 
 ### The Quenn 
@@ -507,10 +507,10 @@ route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.191.0.17
 
 ### The Resonance 
 ```
-iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s [Prefix IP].0.0/16
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 192.191.0.0/16
 
 # The Order
-route add -net 192.191.0.8 netmask 255.255.255.252 192.191.0.14
+route add -net 192.191.0.8 netmask 255.255.255.252 192.191.0.14 
 route add -net 192.191.8.0 netmask 255.255.252.0 gw 192.191.0.14
 route add -net 192.191.0.32 netmask 255.255.255.252 gw 192.191.0.14
 route add -net 192.191.2.0 netmask 255.255.255.0 gw 192.191.0.14
