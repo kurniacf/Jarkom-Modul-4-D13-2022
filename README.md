@@ -534,3 +534,40 @@ route add -net 192.191.1.0 netmask 255.255.255.128 gw 192.191.0.22
 # The Magical
 route add -net 192.191.6.0 netmask 255.255.254.0 gw 192.191.0.18
 ```
+
+## Hasil Ping Beberapa Node
+
+### Johan -> Phanora (A2) 
+<img src="https://user-images.githubusercontent.com/70510279/204099642-eb527b5c-0aac-4fc8-b0e6-d9120b68ca1e.png" width="500"/>
+
+</br>
+
+### The Witch -> Keith (B2)
+<img src="https://user-images.githubusercontent.com/70510279/204100170-e99909bb-e8e2-4ce9-b5eb-571a5b38cf30.png" width="500"/>
+
+</br>
+
+### Phanora -> Guideau (C1)
+<img src="https://user-images.githubusercontent.com/70510279/204100252-b68f69fb-a852-43ab-afb7-aa8a2bae20e4.png" width="500"/>
+
+</br>
+
+### Matt Cugatt -> Spendrow (D3)
+<img src="" width="500"/>
+
+</br>
+
+### Ashaf -> Johan (E1)
+<img src="https://user-images.githubusercontent.com/70510279/204101803-c43fa099-40c7-438e-addf-eebe911583dd.png" width="500"/>
+
+</br>
+
+### Heiga -> The Witch (F2)
+<img src="" width="500"/>
+
+</br>
+
+### The Beast -> The Witch (G1)
+<img src="" width="500"/>
+
+</br>
