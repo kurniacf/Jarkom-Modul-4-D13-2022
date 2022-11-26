@@ -422,3 +422,115 @@ netmask 255.255.255.252
 ## Routing Setiap Node di GNS3
 
 </br>
+
+### The Dauntless 
+```
+echo nameserver 192.168.122.1 > /etc/resolv.conf
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.191.0.33
+```
+
+### The Minister 
+```
+echo nameserver 192.168.122.1 > /etc/resolv.conf
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.191.0.9
+
+# The Dauntless (A18)
+route add -net 192.191.0.32 netmask 255.255.255.252 gw 192.191.0.34
+
+# The Dauntless -> Phanora & Johan (A2)
+route add -net 192.191.2.0 netmask 255.255.255.0 gw 192.191.0.34
+```
+
+### The Order 
+```
+echo nameserver 192.168.122.1 > /etc/resolv.conf
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.191.0.13
+
+# The Minister (A12)
+route add -net 192.191.0.8 netmask 255.255.255.252 192.191.0.10
+
+# The Minister -> Guideau (A1)
+route add -net 192.191.8.0 netmask 255.255.252.0 gw 192.191.0.10
+
+# The Minister -> The Dauntless (A18)
+route add -net 192.191.0.32 netmask 255.255.255.252 gw 192.191.0.10
+route add -net 192.191.2.0 netmask 255.255.255.0 gw 192.191.0.10
+```
+
+### The Quenn 
+```
+echo nameserver 192.168.122.1 > /etc/resolv.conf
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.191.3.1
+```
+
+### The Firefist 
+```
+echo nameserver 192.168.122.1 > /etc/resolv.conf
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.191.0.29
+
+# The Quenn (A5)
+route add -net 192.191.3.0 netmask 255.255.255.0 gw 192.191.3.3
+
+# The Quenn -> The Witch (A10)
+route add -net 192.191.0.0 netmask 255.255.255.192 gw 192.191.3.3
+```
+
+### The Profound 
+```
+echo nameserver 192.168.122.1 > /etc/resolv.conf
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.191.0.25
+```
+
+### The Instrument 
+```
+echo nameserver 192.168.122.1 > /etc/resolv.conf
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.191.0.21
+
+# The Firefist (A17)
+route add -net 192.191.0.28 netmask 255.255.255.252 gw 192.191.0.30
+
+# The Firefist -> The Quenn -> The Witch (A10)
+route add -net 192.191.0.0 netmask 255.255.255.192 gw 192.191.0.30
+
+# The Firefist -> The Quenn -> Keith (A5)
+route add -net 192.191.3.0 netmask 255.255.255.0 gw 192.191.0.30
+
+# The Firefist -> Oakleave (A6)
+route add -net 192.191.4.0 netmask 255.255.254.0 gw 192.191.0.30
+```
+
+### The Magical 
+```
+echo nameserver 192.168.122.1 > /etc/resolv.conf
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.191.0.17
+```
+
+### The Resonance 
+```
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s [Prefix IP].0.0/16
+
+# The Order
+route add -net 192.191.0.8 netmask 255.255.255.252 192.191.0.14
+route add -net 192.191.8.0 netmask 255.255.252.0 gw 192.191.0.14
+route add -net 192.191.0.32 netmask 255.255.255.252 gw 192.191.0.14
+route add -net 192.191.2.0 netmask 255.255.255.0 gw 192.191.0.14
+# The Order -> Ashaf (A3)
+route add -net 192.191.0.64 netmask 255.255.255.252 gw 192.191.0.14 
+
+# The Instrument 
+route add -net 192.191.0.28 netmask 255.255.255.252 gw 192.191.0.22
+route add -net 192.191.0.0 netmask 255.255.255.192 gw 192.191.0.22
+route add -net 192.191.3.0 netmask 255.255.255.0 gw 192.191.0.22
+route add -net 192.191.4.0 netmask 255.255.254.0 gw 192.191.0.22
+# The Instrument -> MattCugatt (A4)
+route add -net 192.191.0.128 netmask 255.255.255.128 gw 192.191.0.22
+# The Instrument -> The Profound (A16)
+route add -net 192.191.0.24 netmask 255.255.255.252 gw 192.191.0.22
+# The Instrument -> The Profound -> Spendrow (A8)
+route add -net 192.191.1.128 netmask 255.255.255.128 gw 192.191.0.22
+# The Instrument -> The Profound -> Helga (A7)
+route add -net 192.191.1.0 netmask 255.255.255.128 gw 192.191.0.22
+
+# The Magical
+route add -net 192.191.6.0 netmask 255.255.254.0 gw 192.191.0.18
+```
