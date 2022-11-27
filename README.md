@@ -90,8 +90,12 @@ Mengikuti hasil tree dan pembagian subnetting di awal, maka dilakukan pembagian 
 </br>
 </br>
 
-### Rumus penghitungan NID dan Broadcast Id
+## Penjelasan Rumus penghitungan NID dan Broadcast Id
+[source code](https://github.com/kurniacf/Jarkom-Modul-4-D13-2022/blob/master/operator.js)
+
+
 ```js
+#### menggunakan bitwise operand untuk menghitung NID dan broadcast id
 // Menghitung NID menggunakan operand AND
 function AND(a, b) {
     return doOperand(splitAB(a, b), '&')
