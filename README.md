@@ -90,6 +90,81 @@ Mengikuti hasil tree dan pembagian subnetting di awal, maka dilakukan pembagian 
 </br>
 </br>
 
+## Penjelasan Rumus penghitungan NID dan Broadcast Id
+[source code](https://github.com/kurniacf/Jarkom-Modul-4-D13-2022/blob/master/operator.js)
+
+
+```js
+#### menggunakan bitwise operand untuk menghitung NID dan broadcast id
+// Menghitung NID menggunakan operand AND
+function AND(a, b) {
+    return doOperand(splitAB(a, b), '&')
+}
+
+// menghitung broadcast id menggunakan operand OR
+function OR(a, b) {
+    return doOperand(splitAB(a, b.split('.').map(x => reverseBit(x)).join('.')), '|')
+}
+```
+#### Split ip per angka buat di proses
+```js
+/**
+* kita ngesplit ip a dan b menjadi array biar bisa dilakuin bitwise operation nya
+* misal a: 192.191.8.0 b: 255.255.252.0 menjadi 
+* [
+*   [192, 191, 8, 0], 
+*   [255, 255, 252, 0]
+* ]
+**/
+function splitAB (a, b) {
+    return [a.split('.'), b.split('.')]
+}
+```
+#### General functionnya buat ngelakuin operasi bitwise
+```js
+// di fungsi general doOperand:
+// masing masing array diatas akan di loop bersamaan (karena length nya pasti 4 makanya aman
+// trus kita ngelakuin bitwise operation pake fungsi evalnya js
+// angka yg di operasiin bakalan ngereturn langsung angka hasil operasi bitwise nya
+function doOperand([a, b], operand) {
+    let res = []
+    for (let i = 0; i < a.length; i++) {
+        res.push(parseInt(eval(`${a[i]} ${operand} ${b[i]}`)))
+    }
+    return res.join('.')
+}
+```
+#### buat operasi OR, bit nya netmask perlu di reverse
+```js
+function reverseBit(x) {
+    var mask = (Math.pow(2,8)-1); // calculate mask
+    return (~x & mask).toString();
+}
+
+// trus tinggal di map aja array netmasknya
+b.split('.').map(x => reverseBit(x)).join('.'))
+```
+#### Main functionnya
+```js
+function main(ip, netmask) {
+    console.table([
+        {
+            ip,
+            NID: AND(ip, netmask),
+            Broadcast: OR(ip, netmask)
+        }
+    ])
+}
+```
+#### Contoh input output
+- input:
+```js
+main("192.191.8.0", "255.255.252.0")
+```
+- output:
+
+![image](https://user-images.githubusercontent.com/74979139/204137949-cad7c488-8666-4f13-be71-74dd8d5f69e1.png)
+
 ## GNS3 Method CIDR
 
 ### Memmbuat Topologi Jaringan di GNS3
