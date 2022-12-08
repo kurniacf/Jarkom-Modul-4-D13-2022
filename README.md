@@ -497,6 +497,11 @@ route add -net 192.191.3.0 netmask 255.255.255.0 gw 192.191.0.30
 
 # The Firefist -> Oakleave (A6)
 route add -net 192.191.4.0 netmask 255.255.254.0 gw 192.191.0.30
+
+# The Instrument -> The Profound -> Spendrow (A8)
+route add -net 192.191.1.128 netmask 255.255.255.128 gw 192.191.0.30
+# The Instrument -> The Profound -> Helga (A7)
+route add -net 192.191.1.0 netmask 255.255.255.128 gw 192.191.0.30
 ```
 
 ### The Magical 
